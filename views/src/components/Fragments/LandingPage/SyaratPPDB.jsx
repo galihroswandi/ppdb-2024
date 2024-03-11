@@ -12,7 +12,7 @@ export default function SyaratPPDB() {
       <section className="content md:flex md:justify-between xl:justify-start xl:gap-10">
         <section
           className="flex flex-col gap-6 xl:gap-10 md:w-1/2"
-          data-aos="fade-down-right"
+          data-aos="fade-down"
           data-aos-offset="200"
           data-aos-delay="50"
           data-aos-duration="800"
@@ -27,7 +27,7 @@ export default function SyaratPPDB() {
         </section>
         <section
           className="image mb-5 md:max-w-xs lg:max-w-lg mt-7 md:-mt-16"
-          data-aos="fade-down-left"
+          data-aos="fade-down"
           data-aos-offset="200"
           data-aos-delay="50"
           data-aos-duration="800"
