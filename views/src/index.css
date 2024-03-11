@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand/static/Quicksand-Medium.ttf")
+      format("truetype"),
+    url("./assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf")
+      format("truetype"),
+    url("./assets/fonts/Quicksand/static/Quicksand-Bold.ttf") format("truetype");
+}
+
+:root {
+  font-family: Quicksand, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* --background-body: #fefbf3; */
+  --background-body: #e3edf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-body);
+  font-weight: 400;
+}
+
+.container-wrapper {
+  @apply px-6 py-4 sm:px-10 sm:py-7 lg:px-14 xl:max-w-7xl xl:mx-auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Tippy JS */
+.tippy-box[data-theme~="primary"] {
+  background-color: #008080;
+  color: #ffff;
+}
+.tippy-box[data-theme~="primary"][data-placement^="top"]
+  > .tippy-arrow::before {
+  border-top-color: #008080;
+}
+.tippy-box[data-theme~="primary"][data-placement^="bottom"]
+  > .tippy-arrow::before {
+  border-bottom-color: #008080;
+}
+.tippy-box[data-theme~="primary"][data-placement^="left"]
+  > .tippy-arrow::before {
+  border-left-color: #008080;
+}
+.tippy-box[data-theme~="primary"][data-placement^="right"]
+  > .tippy-arrow::before {
+  border-right-color: #008080;
+}
