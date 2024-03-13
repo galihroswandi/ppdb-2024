@@ -34,7 +34,7 @@ export default function Footer() {
               ></iframe>
             </section>
           </section>
-          <section className="sosmed ml-20">
+          <section className="sosmed lg:ml-20">
             <header>
               <h3 className="font-bold text-2xl mb-2">Social Media</h3>
             </header>
