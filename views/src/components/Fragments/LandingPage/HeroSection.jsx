@@ -92,12 +92,12 @@ export const Navbar = () => {
         >
           Daftar
         </a>
-        <a
-          href="#"
+        <Link
+          to="/login"
           className="bg-secondary-color text-slate-700 px-6 py-2 font-semibold rounded-md"
         >
           Login
-        </a>
+        </Link>
       </section>
       <button className="lg:hidden">
         <MenuIcon

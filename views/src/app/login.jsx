@@ -49,12 +49,13 @@ export default function Login() {
                 Lupa Password ?
               </Link>
             </section>
-            <button
+            <Link
+              to="/"
               className="flex items-center gap-x-1 justify-center w-full bg-primary-color rounded-md p-2.5 lg:py-3 font-semibold hover:bg-blue-600 mb-8 text-white"
-              type="submit"
+              // type="submit"
             >
               Log In
-            </button>
+            </Link>
             <section className="dont-have-account text-center text-slate-800 text-base">
               <span>Belum punya akun? </span>
               <Link to="/signup" className="text-primary-color font-semibold">
