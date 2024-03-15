@@ -12,6 +12,7 @@ import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import FilePresentRoundedIcon from "@mui/icons-material/FilePresentRounded";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import Logo from "../../../assets/icons/coder.png";
+import LoginIcon from "@mui/icons-material/Login";
 import HeroImage from "../../../assets/img/cuate.png";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -123,7 +124,7 @@ export const Navbar = () => {
             {[
               {
                 text: "Beranda",
-                url: "#",
+                url: "/",
               },
               {
                 text: "Alur PPDB",
@@ -141,20 +142,36 @@ export const Navbar = () => {
                 text: "Form Pendaftaran",
                 url: "/input-data",
               },
+              {
+                text: "Login",
+                url: "/login",
+              },
             ].map((text, index) => (
               <ListItem key={index} disablePadding>
-                <a href={text.url} className="w-full text-slate-700">
-                  <ListItemButton>
-                    <ListItemIcon>
-                      {index === 0 && <HomeRoundedIcon />}
-                      {index === 1 && <FormatListNumberedRoundedIcon />}
-                      {index === 2 && <InfoRoundedIcon />}
-                      {index === 3 && <FilePresentRoundedIcon />}
-                      {index === 4 && <EditNoteIcon />}
-                    </ListItemIcon>
-                    <ListItemText primary={text.text} />
-                  </ListItemButton>
-                </a>
+                {index === 5 && (
+                  <Link to="/login">
+                    <ListItemButton>
+                      <ListItemIcon>
+                        <LoginIcon />
+                      </ListItemIcon>
+                      <ListItemText primary="Login" />
+                    </ListItemButton>
+                  </Link>
+                )}
+                {index !== 5 && (
+                  <a href={text.url} className="w-full text-slate-700">
+                    <ListItemButton>
+                      <ListItemIcon>
+                        {index === 0 && <HomeRoundedIcon />}
+                        {index === 1 && <FormatListNumberedRoundedIcon />}
+                        {index === 2 && <InfoRoundedIcon />}
+                        {index === 3 && <FilePresentRoundedIcon />}
+                        {index === 4 && <EditNoteIcon />}
+                      </ListItemIcon>
+                      <ListItemText primary={text.text} />
+                    </ListItemButton>
+                  </a>
+                )}
               </ListItem>
             ))}
           </List>
