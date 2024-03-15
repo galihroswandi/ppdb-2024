@@ -14,7 +14,7 @@ function App() {
       <Route>
         <Route path="/" element={<LandingPage />} />
         <Route path="login" element={<Login />} />
-        <Route path="input-data" element={<InputData />} />
+        <Route path="inputdata" element={<InputData />} />
       </Route>
     )
   );

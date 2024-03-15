@@ -85,7 +85,7 @@ export const Navbar = () => {
         <a href="#alur-ppdb">Alur PPDB</a>
         <a href="#info-ppdb">Info PPDB</a>
         <a href="#syarat-ppdb">Syarat PPDB</a>
-        <Link to="/input-data">Form Pendaftaran</Link>
+        <Link to="/inputdata">Form Pendaftaran</Link>
       </section>
       <section className="hidden lg:flex items-center gap-2">
         <a
@@ -140,7 +140,7 @@ export const Navbar = () => {
               },
               {
                 text: "Form Pendaftaran",
-                url: "/input-data",
+                url: "/inputdata",
               },
               {
                 text: "Login",
@@ -195,7 +195,7 @@ const ContentHero = () => {
           menyenangkan bersama kami.
         </p>
         <Link
-          to="/input-data"
+          to="/inputdata"
           className="bg-secondary-color text-slate-700 px-6 lg:py-3 py-2.5 font-semibold rounded-md"
         >
           Daftar Sekarang
