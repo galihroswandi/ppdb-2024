@@ -13,6 +13,7 @@ import FilePresentRoundedIcon from "@mui/icons-material/FilePresentRounded";
 import Logo from "../../../assets/icons/coder.png";
 import HeroImage from "../../../assets/img/cuate.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -23,7 +24,7 @@ export default function HeroSection() {
   );
 }
 
-const Navbar = () => {
+export const Navbar = () => {
   const [state, setState] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
@@ -69,19 +70,20 @@ const Navbar = () => {
     <section
       className={`${
         visible ? "navbar" : "navbar hidden"
-      } bg-white w-[90%] fixed top-6 left-[50%] -translate-x-[50%] rounded-full px-5 lg:px-7 py-3 flex justify-between items-center transition-all duration-300`}
+      } bg-white w-[90%] fixed top-6 left-[50%] -translate-x-[50%] rounded-full px-5 lg:px-7 py-3 flex justify-between items-center transition-all duration-300 border border-slate-300`}
       id="navbar"
     >
       <section>
         <img src={Logo} alt="Logo Image" className="w-16 lg:w-20" />
       </section>
       <section className="hidden nav-link-lg lg:flex items-center gap-5 text-slate-700 font-semibold">
-        <a href="#" className="text-slate-600">
+        <Link to="/" className="text-slate-600">
           Beranda
-        </a>
+        </Link>
         <a href="#alur-ppdb">Alur PPDB</a>
         <a href="#info-ppdb">Info PPDB</a>
         <a href="#syarat-ppdb">Syarat PPDB</a>
+        <Link to="/input-data">Form Pendaftaran</Link>
       </section>
       <section className="hidden lg:flex items-center gap-2">
         <a
@@ -169,12 +171,12 @@ const ContentHero = () => {
           secara mudah dan aman untuk memulai perjalanan pendidikan yang
           menyenangkan bersama kami.
         </p>
-        <a
-          href="#"
+        <Link
+          to="/input-data"
           className="bg-secondary-color text-slate-700 px-6 lg:py-3 py-2.5 font-semibold rounded-md"
         >
           Daftar Sekarang
-        </a>
+        </Link>
       </section>
       <section className="img lg:px-14 pr-0 pt-0">
         <img src={HeroImage} alt="Hero Image" className="w-full xl:w-auto" />

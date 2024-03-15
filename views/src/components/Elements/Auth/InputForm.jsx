@@ -5,9 +5,16 @@ const InputForm = (props) => {
 
   return (
     <div className={`input-form w-full flex ${classWrapper}`}>
-      <section className="icon-wrapper border-l border-t border-b border-[#455A64] rounded-l-md pl-3 flex justify-center items-center">
-        <img src={imgUrl} alt={`${placeholder} Icon`} width={24} height={24} />
-      </section>
+      {imgUrl && (
+        <section className="icon-wrapper border-l border-t border-b border-[#455A64] rounded-l-md pl-3 flex justify-center items-center">
+          <img
+            src={imgUrl}
+            alt={`${placeholder} Icon`}
+            width={24}
+            height={24}
+          />
+        </section>
+      )}
       <input
         type={type}
         name={placeholder.toLowerCase()}
