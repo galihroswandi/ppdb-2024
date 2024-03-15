@@ -10,6 +10,7 @@ import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import FormatListNumberedRoundedIcon from "@mui/icons-material/FormatListNumberedRounded";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import FilePresentRoundedIcon from "@mui/icons-material/FilePresentRounded";
+import EditNoteIcon from "@mui/icons-material/EditNote";
 import Logo from "../../../assets/icons/coder.png";
 import HeroImage from "../../../assets/img/cuate.png";
 import { useEffect, useState } from "react";
@@ -136,6 +137,10 @@ export const Navbar = () => {
                 text: "Syarat PPDB",
                 url: "#syarat-ppdb",
               },
+              {
+                text: "Form Pendaftaran",
+                url: "/input-data",
+              },
             ].map((text, index) => (
               <ListItem key={index} disablePadding>
                 <a href={text.url} className="w-full text-slate-700">
@@ -145,6 +150,7 @@ export const Navbar = () => {
                       {index === 1 && <FormatListNumberedRoundedIcon />}
                       {index === 2 && <InfoRoundedIcon />}
                       {index === 3 && <FilePresentRoundedIcon />}
+                      {index === 4 && <EditNoteIcon />}
                     </ListItemIcon>
                     <ListItemText primary={text.text} />
                   </ListItemButton>
