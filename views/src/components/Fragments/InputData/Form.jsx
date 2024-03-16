@@ -125,9 +125,9 @@ export default function Form() {
                       labelName="Tanggal-Lahir"
                       required
                     />
-                    <section className="grid mt-4">
+                    <section className="grid mt-4 lg:flex gap-5">
                       <button
-                        className="flex items-center gap-x-1 justify-center w-full bg-primary-color rounded-md p-2.5 lg:py-3 font-semibold hover:bg-blue-600 mb-3 text-white"
+                        className="flex items-center gap-x-1 justify-center w-full bg-primary-color rounded-md p-2.5 lg:py-3 font-semibold hover:bg-blue-600 mb-3 text-white lg:order-2"
                         type="button"
                         onClick={handleNext}
                       >
